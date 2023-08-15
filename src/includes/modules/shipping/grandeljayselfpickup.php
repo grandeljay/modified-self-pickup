@@ -257,6 +257,12 @@ class grandeljayselfpickup extends StdModule
     {
         global $total_weight;
 
+        $lang_current = $_SESSION['language_code'] ?? 'de';
+
+        if ('de' !== $lang_current) {
+            return null;
+        }
+
         $checkout_title      = sprintf(
             $this->getConfig('TEXT_TITLE_WEIGHT'),
             round($total_weight, 2)
