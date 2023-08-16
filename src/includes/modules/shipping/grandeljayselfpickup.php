@@ -163,7 +163,7 @@ class grandeljayselfpickup extends StdModule
         return $html;
     }
 
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.2.0';
 
     /**
      * Used by modified to determine the cheapest shipping method. Should
