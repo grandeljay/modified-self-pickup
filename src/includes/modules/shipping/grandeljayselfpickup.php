@@ -177,6 +177,8 @@ class grandeljayselfpickup extends StdModule
     {
         parent::__construct(Constants::MODULE_SHIPPING_NAME);
 
+        $this->addKey('SORT_ORDER');
+
         $this->addKey('ADDRESS_NAME_FIRST');
         $this->addKey('ADDRESS_NAME_LAST');
         $this->addKey('ADDRESS_COMPANY');
@@ -194,6 +196,8 @@ class grandeljayselfpickup extends StdModule
         parent::install();
 
         $this->addConfiguration('ALLOWED', '', 6, 1);
+
+        $this->addConfiguration('SORT_ORDER', 4, 6, 1);
 
         $address_lines  = preg_split('/\r\n|\r|\n/', \STORE_NAME_ADDRESS);
         $address_street = $address_lines[1] ?? '';
@@ -234,6 +238,8 @@ class grandeljayselfpickup extends StdModule
         parent::remove();
 
         $this->removeConfiguration('ALLOWED');
+
+        $this->removeConfiguration('SORT_ORDER');
 
         $this->removeConfiguration('ADDRESS_NAME_FIRST');
         $this->removeConfiguration('ADDRESS_NAME_LAST');

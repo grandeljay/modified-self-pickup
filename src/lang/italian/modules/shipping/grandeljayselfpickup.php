@@ -23,6 +23,9 @@ $translations = array(
     'ALLOWED_TITLE'            => '',
     'ALLOWED_DESC'             => '',
 
+    'SORT_ORDER_TITLE'         => 'Ordinamento',
+    'SORT_ORDER_DESC'          => 'Determina l\'ordinamento nell\'Admin e nel Checkout. I numeri più bassi vengono visualizzati per primi.',
+
     'ADDRESS_NAME_FIRST_TITLE' => 'Nome',
     'ADDRESS_NAME_FIRST_DESC'  => 'Inserisca il nome.',
     'ADDRESS_NAME_LAST_TITLE'  => 'Cognome',

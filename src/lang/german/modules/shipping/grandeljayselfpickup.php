@@ -23,6 +23,9 @@ $translations = array(
     'ALLOWED_TITLE'            => '',
     'ALLOWED_DESC'             => '',
 
+    'SORT_ORDER_TITLE'         => 'Sortierreihenfolge',
+    'SORT_ORDER_DESC'          => 'Bestimmt die Sortierung im Admin und Checkout. Niedrigste Zahlen werden zuerst angezeigt.',
+
     'ADDRESS_NAME_FIRST_TITLE' => 'Vorname',
     'ADDRESS_NAME_FIRST_DESC'  => 'Geben Sie den Vornamen an.',
     'ADDRESS_NAME_LAST_TITLE'  => 'Nachname',

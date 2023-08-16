@@ -23,6 +23,9 @@ $translations = array(
     'ALLOWED_TITLE'            => '',
     'ALLOWED_DESC'             => '',
 
+    'SORT_ORDER_TITLE'         => 'Orden de clasificación',
+    'SORT_ORDER_DESC'          => 'Determina la clasificación en Admin y Checkout. Los números más bajos se muestran primero.',
+
     'ADDRESS_NAME_FIRST_TITLE' => 'Nombre',
     'ADDRESS_NAME_FIRST_DESC'  => 'Introduzca el nombre de pila.',
     'ADDRESS_NAME_LAST_TITLE'  => 'Apellido',

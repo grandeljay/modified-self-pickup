@@ -23,6 +23,9 @@ $translations = array(
     'ALLOWED_TITLE'            => '',
     'ALLOWED_DESC'             => '',
 
+    'SORT_ORDER_TITLE'         => 'Sort order',
+    'SORT_ORDER_DESC'          => 'Determines the sorting in the Admin and Checkout. Lowest numbers are displayed first.',
+
     'ADDRESS_NAME_FIRST_TITLE' => 'First name',
     'ADDRESS_NAME_FIRST_DESC'  => 'Enter the first name.',
     'ADDRESS_NAME_LAST_TITLE'  => 'Last name',
