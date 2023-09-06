@@ -12,10 +12,10 @@ use Grandeljay\SelfPickup\Constants;
 
 $translations = array(
     /** Module */
-    'TITLE'                    => 'grandeljay - Self Pickup',
-    'TEXT_TITLE'               => 'Self Pickup',
-    'TEXT_TITLE_WEIGHT'        => 'Self Pickup (%s kg)',
-    'LONG_DESCRIPTION'         => 'Ajoute la méthode d\'expédition Self Pickup dans le checkout.',
+    'TITLE'                    => 'grandeljay - Enlèvement par le client',
+    'TEXT_TITLE'               => 'Enlèvement par le client',
+    'TEXT_TITLE_WEIGHT'        => 'Enlèvement par le client (%s kg)',
+    'LONG_DESCRIPTION'         => 'Ajoute la méthode d\'expédition de l\'auto-cueillette dans le checkout.',
     'STATUS_TITLE'             => 'Statut',
     'STATUS_DESC'              => 'Sélectionnez Oui pour activer le module et Non pour le désactiver.',
 
