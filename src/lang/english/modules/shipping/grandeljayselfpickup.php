@@ -14,7 +14,7 @@ $translations = array(
     /** Module */
     'TITLE'                    => 'grandeljay - Self Pickup',
     'TEXT_TITLE'               => 'Self Pickup',
-    'TEXT_TITLE_WEIGHT'        => 'Self Pickup (%s kg)',
+    'TEXT_TITLE_WEIGHT'        => 'Self Pickup (%s)',
     'LONG_DESCRIPTION'         => 'Adds the Self Pickup shipping method in the checkout.',
     'STATUS_TITLE'             => 'Status',
     'STATUS_DESC'              => 'Select Yes to activate the module and No to deactivate it.',

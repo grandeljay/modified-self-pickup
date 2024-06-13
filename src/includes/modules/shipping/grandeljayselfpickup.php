@@ -12,6 +12,7 @@
  */
 
 use Grandeljay\SelfPickup\Constants;
+use Grandeljay\ShippingModuleHelper\OrderPacker;
 use RobinTheHood\ModifiedStdModule\Classes\StdModule;
 
 class grandeljayselfpickup extends StdModule
@@ -260,32 +261,6 @@ class grandeljayselfpickup extends StdModule
         $this->removeConfiguration('CHECKOUT_TEXT');
     }
 
-    private function getShippingWeight(): float
-    {
-        global $order;
-
-        $shipping_weight = 0;
-
-        foreach ($order->products as $product) {
-            $length = $product['length'] ?? 0;
-            $width  = $product['width']  ?? 0;
-            $height = $product['height'] ?? 0;
-            $weight = $product['weight'] ?? 0;
-
-            if ($length > 0 && $width > 0 && $height > 0) {
-                $volumetric_weight = ($length * $width * $height) / 5000;
-
-                if ($volumetric_weight > $weight) {
-                    $weight = $volumetric_weight;
-                }
-            }
-
-            $shipping_weight += $weight * $product['quantity'];
-        }
-
-        return $shipping_weight;
-    }
-
     /**
      * Used by modified to show shipping costs. Will be ignored if the value is
      * not an array.
@@ -300,9 +275,14 @@ class grandeljayselfpickup extends StdModule
             return null;
         }
 
+        $order_packer = new OrderPacker();
+        $order_packer->setIdealWeight(15);
+        $order_packer->setMaximumWeight(60);
+        $order_packer->packOrder();
+
         $checkout_title      = sprintf(
             $this->getConfig('TEXT_TITLE_WEIGHT'),
-            round($this->getShippingWeight(), 2)
+            $order_packer->getWeightFormatted()
         );
         $checkout_texts_json = $this->getConfig('CHECKOUT_TEXT');
         $checkout_texts      = json_decode($checkout_texts_json, true);
@@ -317,8 +297,8 @@ class grandeljayselfpickup extends StdModule
                     'title' => $checkout_text,
                     'cost'  => 0,
                     'type'  => 'self',
+                ),
             ),
-        ),
         );
 
         return $quotes;

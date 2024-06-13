@@ -14,7 +14,7 @@ $translations = array(
     /** Module */
     'TITLE'                    => 'grandeljay - colección propia',
     'TEXT_TITLE'               => 'Auto-recolección',
-    'TEXT_TITLE_WEIGHT'        => 'Recogida propia (%s kg)',
+    'TEXT_TITLE_WEIGHT'        => 'Recogida propia (%s)',
     'LONG_DESCRIPTION'         => 'Añade el método de envío de auto-recolección en la caja.',
     'STATUS_TITLE'             => 'Estado',
     'STATUS_DESC'              => 'Seleccione Sí para activar el módulo y No para desactivarlo.',

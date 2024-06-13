@@ -14,7 +14,7 @@ $translations = array(
     /** Module */
     'TITLE'                    => 'grandeljay - Selbstabholung',
     'TEXT_TITLE'               => 'Selbstabholung',
-    'TEXT_TITLE_WEIGHT'        => 'Selbstabholung (%s kg)',
+    'TEXT_TITLE_WEIGHT'        => 'Selbstabholung (%s)',
     'LONG_DESCRIPTION'         => 'Fügt die Selbstabholung Versandmethode im Checkout ein.',
     'STATUS_TITLE'             => 'Status',
     'STATUS_DESC'              => 'Wählen Sie Ja um das Modul zu aktivieren und Nein um es zu deaktivieren.',
